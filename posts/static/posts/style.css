@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+/* Main container */
+
+body {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Headings */
+
+h1 {
+    color:#3b0b21 ;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 30px;
+}
+
+/* Links */
+
+a {
+    color: #bf1f6a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+
+.nav-links {
+    margin: 20px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.nav-links a {
+    margin-right: 15px;
+}
+
+/* Posts */
+
+.post {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.post h2 {
+    margin-top: 0;
+}
+
+.post p {
+    line-height: 1.6;
+}
+
+/* Forms */
+
+form {
+    background: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #bf1f6a;
+}
+
+/* Buttons */
+
+button {
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: #bf1f6a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #bf1f6a;
+}
+
+/* Comments */
+
+.comment {
+    background: white;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #bf1f6a;
+}
+
+.comment p {
+    margin: 7px 0;
+}
+
+/* Error messages */
+
+.error {
+    color: #b00020;
+    background: #ffe5e5;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Welcome message */
+
+.welcome {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+/* Horizontal line */
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 25px 0;
+}

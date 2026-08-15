@@ -1,0 +1,119 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+
+    <link rel="stylesheet" href="{% static 'posts/style.css' %}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="post">
+
+        <h1>{{ post.title }}</h1>
+
+        <p class="post-body">
+            {{ post.body }}
+        </p>
+
+        <p class="author">
+            Author: {{ post.author.username }}
+        </p>
+
+        <p class="author">
+            Created: {{ post.created_at }}
+        </p>
+
+    </div>
+
+
+    {% if user.is_authenticated %}
+
+        <div class="post">
+
+            <h2>Add Comment</h2>
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <textarea
+                    name="body"
+                    rows="5"
+                    cols="50"
+                    placeholder="Write your comment"
+                ></textarea>
+
+                <br><br>
+
+                <button type="submit">
+                    Add Comment
+                </button>
+
+            </form>
+
+        </div>
+
+    {% else %}
+
+        <div class="post">
+
+            <p>
+                You must login to add a comment.
+            </p>
+
+            <a href="{% url 'login' %}">
+                Login
+            </a>
+
+        </div>
+
+    {% endif %}
+
+
+    <h2>Comments</h2>
+
+
+    {% for comment in post.comments.all %}
+
+        <div class="comment">
+
+            <p>
+                <strong>
+                    {{ comment.author.username }}
+                </strong>
+            </p>
+
+            <p>
+                {{ comment.body }}
+            </p>
+
+            <p class="author">
+                {{ comment.created_at }}
+            </p>
+
+        </div>
+
+    {% empty %}
+
+        <p>No comments yet.</p>
+
+    {% endfor %}
+
+
+    <div class="nav-links">
+
+        <a href="{% url 'home' %}">
+            Back to Home
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
